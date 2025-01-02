@@ -54,3 +54,7 @@
   - `TreeSet` - mais lento (operações O(log(n)) em árvore rubro-negra) e ordenado pelo
   compareTo do objeto (ou Comparator)
   - `LinkedHashSet` - velocidade intermediária e elementos na ordem em que são adicionados 
+
+# Log entry 
+- Nesse exercício resolvido, a ideia é ver quantos usuários diferentes acessaram a plataforma
+- Como aqui não importa ordem, apenas saber quais são diferentes, o `set`, com a implementação `HashSet` já resolve.
