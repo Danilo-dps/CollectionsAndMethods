@@ -1,4 +1,5 @@
-# Collections And Methods
+# Collections and Methods
+## List, Set, Map são interfaces ideais para coleções, e aqui será tratado um pouco desse comportamento
 
 # Comparação de Dados em Java
 
@@ -42,18 +43,46 @@
   - Tipos primitivos: Comparação de valores.
   - Tipos de referência: Comparação de referências de memória.
 
+# List `<T>`
+
+- Representa uma coleção ordenada de elementos
+- Permite elementos duplicados
+- Mantém a ordem de inserção dos elementos
+- Acesso e modificação de elementos por índice
+- Oferece métodos para manipulação de sublistas, busca de elementos e iteração eficiente
+
+## Principais Implementações
+
+- **ArrayList**: baseado em array dinâmico, oferece acesso rápido por índice (operações O(1) para acesso), mas inserções e remoções podem ser lentas (operações O(n))
+- **LinkedList**: baseado em lista duplamente encadeada, permite inserções e remoções rápidas (operações O(1) para inserção/remoção), mas acesso por índice é mais lento (operações O(n))
+- **Vector**: similar ao `ArrayList`, mas sincronizado para garantir segurança em ambientes com múltiplas threads (menos utilizado hoje em dia em comparação ao `ArrayList`)
+
 # Set `<T>`
-- Set é uma interface
+
 - Representa um conjunto de elementos (similar ao da Álgebra)
 - Não admite repetições
 - Elementos não possuem posição
 - Acesso, inserção e remoção de elementos são rápidos
 - Oferece operações eficientes de conjunto: interseção, união, diferença.
-- Principais implementações:
-  - `HashSet` - mais rápido (operações O(1) em tabela hash) e não ordenado
-  - `TreeSet` - mais lento (operações O(log(n)) em árvore rubro-negra) e ordenado pelo
-  compareTo do objeto (ou Comparator)
-  - `LinkedHashSet` - velocidade intermediária e elementos na ordem em que são adicionados 
+
+## Principais Implementações
+
+- `HashSet` - mais rápido (operações O(1) em tabela hash) e não ordenado
+- `TreeSet` - mais lento (operações O(log(n)) em árvore rubro-negra) e ordenado pelo `compareTo` do objeto (ou `Comparator`)
+- `LinkedHashSet` - velocidade intermediária e elementos na ordem em que são adicionados
+
+# Map `<K, V>`
+
+- Representa uma coleção de pares chave-valor
+- Não permite chaves duplicadas, mas permite valores duplicados
+- Cada chave está mapeada para exatamente um valor
+- Oferece métodos eficientes para buscar, inserir e remover pares chave-valor
+
+## Principais Implementações
+
+- **HashMap**: baseado em tabela hash, oferece desempenho rápido para operações de busca, inserção e remoção (operações O(1)), mas não mantém a ordem dos elementos
+- **TreeMap**: baseado em árvore rubro-negra, mantém as chaves ordenadas de acordo com a ordem natural ou um `Comparator` fornecido (operações O(log(n)))
+- **LinkedHashMap**: combinação de `HashMap` e lista duplamente encadeada, mantém a ordem de inserção das entradas (operações O(1) para busca, inserção e remoção)
 
 # Log entry 
 - Nesse exercício resolvido, a ideia é ver quantos usuários diferentes acessaram a plataforma
