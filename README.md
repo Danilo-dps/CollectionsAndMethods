@@ -87,3 +87,9 @@
 # Log entry 
 - Nesse exercício resolvido, a ideia é ver quantos usuários diferentes acessaram a plataforma
 - Como aqui não importa ordem, apenas saber quais são diferentes, o `set`, com a implementação `HashSet` já resolve.
+
+# Stock 
+- Nesse exercício resolvido, a ideia é ver se determinado produto já foi inserido na coleção
+
+# Votes
+- Nesse exercício, a ideia e fazer uma contagem de votos
